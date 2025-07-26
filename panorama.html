@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PANORAMA MODE</title>
+  <link rel="stylesheet" href="panorama.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-main">
+      <span class="logo"><span class="logo-icon"></span>PANORAMA MODE</span>
+      <form class="header-search" onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Rechercher un produit..." />
+        <button type="submit">🔍</button>
+      </form>
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#contact">Contact</a>
+        <a href="#panier" class="panier-link">Panier (0)</a>
+        <a href="#" id="open-signup">Inscription</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="accueil">
+      <h2>Bienvenue chez PANORAMA MODE</h2>
+      <p>Découvrez les dernières tendances et profitez de nos offres exclusives !</p>
+    </section>
+    <section class="produits" id="produits">
+      <h2>Nos Produits</h2>
+      <div class="produit-grid">
+        <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Robe" alt="Robe tendance"/>
+          <h3>Robe tendance</h3>
+          <p>Prix : 49€</p>
+          <button>Ajouter au panier</button>
+        </div>
+        <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Chemise" alt="Chemise chic"/>
+          <h3>Chemise chic</h3>
+          <p>Prix : 35€</p>
+          <button>Ajouter au panier</button>
+        </div>
+        <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Jean" alt="Jean classique"/>
+          <h3>Jean classique</h3>
+          <p>Prix : 40€</p>
+          <button>Ajouter au panier</button>
+        </div>
+         <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Jean" alt="Jean classique"/>
+          <h3>Jean classique</h3>
+          <p>Prix : 40€</p>
+          <button>Ajouter au panier</button>
+        </div>
+         <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Jean" alt="Jean classique"/>
+          <h3>Jogging</h3>
+          <p>Prix : 40€</p>
+          <button>Ajouter au panier</button>
+        </div>
+         <div class="produit">
+          <img src="https://via.placeholder.com/200x250?text=Jean" alt="Jean classique"/>
+          <h3>Tee-shirt</h3>
+          <p>Prix : 40€</p>
+          <button>Ajouter au panier</button>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contactez-nous</h2>
+      <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 PANORAMA MODE. Tous droits réservés.</p>
+  </footer>
+  <div class="modals">
+    <section class="signup-modal" id="signup-modal">
+      <div class="signup-content">
+        <span class="close-modal" id="close-signup">&times;</span>
+        <h2>Inscription Client</h2>
+        <form id="signup-form">
+          <label for="signup-nom">Nom :</label>
+          <input type="text" id="signup-nom" name="nom" required>
+          <label for="signup-email">Email :</label>
+          <input type="email" id="signup-email" name="email" required>
+          <label for="signup-password">Mot de passe :</label>
+          <input type="password" id="signup-password" name="password" required>
+          <button type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+    <section class="payment-modal" id="payment-modal">
+      <div class="payment-content">
+        <span class="close-modal" id="close-payment">&times;</span>
+        <h2>Paiement</h2>
+        <form id="payment-form">
+          <label for="card-number">Numéro de carte :</label>
+          <input type="text" id="card-number" name="card-number" maxlength="19" required>
+          <label for="card-name">Nom sur la carte :</label>
+          <input type="text" id="card-name" name="card-name" required>
+          <label for="card-expiry">Date d'expiration :</label>
+          <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" maxlength="5" required>
+          <label for="card-cvc">CVC :</label>
+          <input type="text" id="card-cvc" name="card-cvc" maxlength="4" required>
+          <button type="submit">Payer</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="panorama.js"></script>
+</body>
+</html>

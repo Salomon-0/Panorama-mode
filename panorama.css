@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f5f7;
+  color: #222;
+}
+header {
+  background: #232f3e;
+  color: #fff;
+  padding: 0;
+  box-shadow: 0 2px 8px 0 rgba(35,47,62,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7em 2vw;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #ff6a00;
+  letter-spacing: 1px;
+}
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  background: #14cc95;
+  border-radius: 8px;
+  display: inline-block;
+}
+.header-search {
+  flex: 1;
+  margin: 0 2vw;
+  display: flex;
+}
+.header-search input {
+  width: 100%;
+  padding: 9px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  font-size: 1em;
+  outline: none;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.header-search button {
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 0 18px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.header-search button:hover {
+  background: #e65c00;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05em;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ff6a00;
+}
+.hero {
+  background: linear-gradient(90deg, #fbeee6 0%, #f5f5f7 100%);
+  color: #232f3e;
+  text-align: left;
+  padding: 48px 0 32px 0;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 2px 8px 0 rgba(35,47,62,0.04);
+}
+.hero h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2em;
+  color: #444;
+}
+.produits {
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.produits h2 {
+  text-align: left;
+  color: #232f3e;
+  margin-bottom: 24px;
+  font-size: 1.5em;
+}
+.produit-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.produit {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(35,47,62,0.08);
+  width: 220px;
+  padding: 16px 12px 18px 12px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.produit:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px 0 rgba(35,47,62,0.13);
+}
+.produit img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+.produit:hover img {
+  transform: scale(1.04);
+}
+.produit h3 {
+  margin: 8px 0 4px 0;
+  color: #232f3e;
+  font-size: 1.1em;
+}
+.produit p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 1em;
+}
+.produit button {
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  padding: 9px 0;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: auto;
+}
+.produit button:hover {
+  background: #e65c00;
+}
+.produit button:active {
+  transform: scale(0.97);
+}
+.contact {
+  max-width: 600px;
+  margin: 40px auto 30px auto;
+  padding: 30px 25px 20px 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(26,34,56,0.10);
+  animation: fadeInContact 1.2s 0.5s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes fadeInContact {
+  0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.contact h2 {
+  text-align: center;
+  color: #1a2238;
+  margin-bottom: 20px;
+}
+.contact label {
+  margin-top: 10px;
+  color: #1a2238;
+  font-weight: 500;
+}
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1em;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.contact input:focus,
+.contact textarea:focus {
+  background: #fffbe6;
+  box-shadow: 0 0 0 2px #ffd70055;
+  outline: none;
+}
+.contact button {
+  background: #ffd700;
+  color: #1a2238;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.contact button:hover {
+  background: #ffb300;
+}
+footer {
+  background: #1a2238;
+  color: #ffd700;
+  text-align: center;
+  padding: 1.2em 0 1em 0;
+  margin-top: 40px;
+  font-size: 1em;
+  animation: fadeInFooter 1.2s 0.7s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes fadeInFooter {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.signup-modal, .payment-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(30,34,56,0.45);
+  justify-content: center;
+  align-items: center;
+  animation: fadeInModal 0.4s;
+}
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.signup-content, .payment-content {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(26,34,56,0.18);
+  padding: 32px 28px 22px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  animation: fadeInForm 0.5s;
+}
+@keyframes fadeInForm {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.close-modal {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 2em;
+  color: #ffd700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-modal:hover {
+  color: #ffb300;
+}
+.signup-content h2, .payment-content h2 {
+  text-align: center;
+  color: #1a2238;
+  margin-bottom: 18px;
+}
+.signup-content form, .payment-content form {
+  display: flex;
+  flex-direction: column;
+}
+.signup-content label, .payment-content label {
+  margin-top: 10px;
+  color: #1a2238;
+  font-weight: 500;
+}
+.signup-content input, .payment-content input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1em;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.signup-content input:focus, .payment-content input:focus {
+  background: #fffbe6;
+  box-shadow: 0 0 0 2px #ffd70055;
+  outline: none;
+}
+.signup-content button, .payment-content button {
+  background: #ffd700;
+  color: #1a2238;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background 0.3s, transform 0.2s;
+}
+.signup-content button:hover, .payment-content button:hover {
+  background: #ffb300;
+}
+@media (max-width: 700px) {
+  .produit-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .produit {
+    width: 90%;
+  }
+  .contact {
+    padding: 15px 5px 10px 5px;
+  }
+  .signup-content, .payment-content {
+    min-width: 90vw;
+    padding: 15px 5px 10px 5px;
+  }
+}
